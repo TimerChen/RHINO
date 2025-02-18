@@ -1,0 +1,105 @@
+humanh1_quat:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: train
+    CACHE: True
+    UPPER_BODY_ONLY: True
+    RANDOM_SWAP: False
+    FEAT_TYPE: "quat"
+humanh1_val_quat:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: val
+    CACHE: True
+    UPPER_BODY_ONLY: True
+    RANDOM_SWAP: False
+    FEAT_TYPE: "quat"
+    
+humanh1_6d:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: train_motion
+    CACHE: True
+    UPPER_BODY_ONLY: False
+    RANDOM_SWAP: False
+    FEAT_TYPE: "6d"
+    HAND_DIM: 12
+    FPS: 30
+    HAND_UPDATE: 6
+    SCENARIO: 0
+
+humanh1_val_6d:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: val_motion
+    CACHE: True
+    UPPER_BODY_ONLY: False
+    RANDOM_SWAP: False
+    FEAT_TYPE: "6d"
+    HAND_DIM: 12
+    FPS: 30
+    HAND_UPDATE: 6
+    SCENARIO: 0
+
+interhuman:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: train
+    CACHE: True
+    UPPER_BODY_ONLY: False
+    RANDOM_SWAP: False
+    HAND_DIM: 12
+    FPS: 30
+    HAND_UPDATE: 6
+    LOAD_HAND_DETAILS: True
+    SCENARIO: 0
+
+# interhuman_middle:
+#     NAME: humanh1
+#     DATA_ROOT: ./mydata/motions_processed
+#     MOTION_REP: global
+#     MODE: train
+#     CACHE: True
+#     UPPER_BODY_ONLY: True
+#     RANDOM_SWAP: False
+#     SIZE: "middle"
+
+interhuman_val:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: val
+    CACHE: True
+    UPPER_BODY_ONLY: False
+    HAND_DIM: 12
+    FPS: 30
+    HAND_UPDATE: 6
+    LOAD_HAND_DETAILS: True
+    SCENARIO: 0
+
+interhuman_test:
+    NAME: humanh1
+    DATA_ROOT: ./mydata/motions_processed
+    MOTION_REP: global
+    MODE: test
+    CACHE: True
+    UPPER_BODY_ONLY: False
+    HAND_DIM: 12
+    FPS: 30
+    HAND_UPDATE: 6
+    LOAD_HAND_DETAILS: True
+    SCENARIO: 0
+
+# interhuman_infer:
+#     NAME: humanh1
+#     DATA_ROOT: ./mydata/motions_processed
+#     MOTION_REP: global
+#     MODE: infer
+#     CACHE: True
+#     UPPER_BODY_ONLY: True
+#     RANDOM_SWAP: False

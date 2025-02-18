@@ -1,0 +1,62 @@
+NAME: InterGen
+DIFFUSION: True
+NUM_LAYERS: 4
+NUM_HEADS: 8
+DROPOUT: 0.1
+
+# INPUT_DIM: 48 # 8*6
+# INPUT_H1_DIM: 8 # 8
+# INPUT_DIM: 60 # 8*6 + 12
+# INPUT_DIM: 48 # 6*6 + 12
+# INPUT_DIM: 50 # 6*6 + 12 + 2
+# INPUT_H1_DIM: 24 # 10+12+2
+# must be [input_dim + input_h1_dim + not_used_dim]
+
+HUMAN_BODY_DIM: 36
+HAND_DIM: 12
+# INPUT_DIM = HUMAN_BODY_DIM + HAND_DIM + 2 * NUM_OBJ
+H1_BODY_DIM: 10
+ADD_OCCUPANCY: True
+NO_HUMAN_MOTION: False
+# INPUT_H1_DIM = H1_BODY_DIM + HAND_DIM + 2 * NUM_OBJ
+HISTORY_LENGTH: 30
+REMOVE_HISTORY: 0
+PREDICT_LENGTH: 10
+
+LATENT_DIM: 256
+FF_SIZE: 256
+SKIP_TEXT: True
+
+# COND_CLASS: 4
+COND_CLASS: 7
+NUM_OBJ: 5
+# COND_CLASS: 6
+# NUM_OBJ: 1
+
+ACTIVATION: gelu
+BACKBONE: seq
+
+# CHECKPOINT: checkpoints/ReAct-30-10-d256x4-t300/model_6d_seq_10_react_1226_scene2_newhand_cheer_2/epoch=2499-step=400000.ckpt
+# CHECKPOINT: checkpoints/ReAct-30-10-d256x4-t300/model_6d_seq_0_act_1230_scene2_2/epoch=3999-step=592000.ckpt
+# CHECKPOINT: checkpoints/ReAct-30-10-d256x4-t300/model_6d_seq_0_no_human_motion_0108_scene2_2/epoch=3999-step=592000.ckpt
+CHECKPOINT: checkpoints/ReAct-30-10-d256x4-t300/model_6d_seq_0_react_1228_scene2_newhandshake_2/epoch=3749-step=555000.ckpt
+
+PRED_HUMAN: False
+VEL_LOSS: 5
+
+DIFFUSION_STEPS: 300
+BETA_SCHEDULER: cosine
+SAMPLER: uniform
+
+MOTION_REP: global
+FINETUNE: False
+
+TEXT_ENCODER: clip
+T_BAR: 210
+
+CONTROL: text
+# STRATEGY: ddim10
+STRATEGY: ddim30
+# STRATEGY: ddim50
+CFG_WEIGHT: 3.5
+

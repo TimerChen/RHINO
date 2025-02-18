@@ -1,0 +1,24 @@
+GENERAL:
+  EXP_NAME: classifier
+  CHECKPOINT: ./checkpoints
+  LOG_DIR: log/run1
+
+TRAIN:
+  LR: 1e-4
+  WEIGHT_DECAY: 0.00002
+  BATCH_SIZE: 256
+  EPOCH: 300
+  # STEP: 1000000
+  LOG_STEPS: 10
+  # SAVE_STEPS: 50
+  SAVE_EPOCH: 5
+  SAVE_TOP_K: -1
+  RESUME: #checkpoints/classifier/modelreact_1103_30fps_fullhis_handupdate6_class13/epoch=299-step=13200.ckpt
+  NUM_WORKERS: 10
+  MODE: finetune
+  LAST_EPOCH: 0
+  LAST_ITER: 0
+  HISTORY_LENGTH: 30
+  PREDICT_LENGTH: 10
+  HAND_NOISE_STD: 0
+  # HAND_NOISE_STD: 0.1

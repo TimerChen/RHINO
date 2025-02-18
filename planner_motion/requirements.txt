@@ -1,0 +1,17 @@
+tqdm~=4.65.0
+lightning==1.9.1
+matplotlib==3.10.0
+pillow~=11.1.0
+yacs~=0.1.8
+mmcv~=1.6.2
+tabulate~=0.8.9
+termcolor~=1.1.0
+smplx~=0.1.28
+opencv-python~=4.6.0.66
+numpy==1.23.1
+scipy==1.13.1
+h5py==3.12.1
+packaging==24.1
+seaborn==0.13.2
+scikit-learn==1.6.1
+tensorboard==2.18.0

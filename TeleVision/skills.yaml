@@ -1,0 +1,298 @@
+
+DefaultConfig:
+  ckpt: 45000
+  state_name: [ head, arm, wrist, hand ]
+  action_dim: 25
+  # delay: [4, 8] # TODO: try no delay
+  delay: [0, 0] # TODO: try no delay
+  reference_replay_id: 0
+  skill_set_size: 1
+  init_shift: 15
+  progress_thresh: 0.85
+  progress_frame_replay: 25
+  timeout: 15
+  warmup_time: 2
+  use_cancel_unsafe: false
+  init_act: false
+  global_offset: [ 0, 0, 0, 0, 0, 0.0, 0, 0, -0.0, 0  ] # arm, wrist, arm, wrist
+  offset: [ 0, 0, 0, 0, 0, 0.0, 0, 0, -0.0, 0  ] # arm, wrist, arm, wrist
+
+SkillPairs:
+  # can
+  - [ 48, 25 ]
+  # human-plate
+  - [ 30, 47 ]
+  # stamp
+  - [ 56, 58 ]
+  # - [ 31, 33 ]
+  # stamp
+  - [ 51, 53 ]
+  # cap
+  - [ 59, 60 ]
+
+Skills:
+- id: 25
+  # exptid: 25-place-can-R/25-dino-short-1014-r/
+  # exptid: 25-place-can-R/25-progress25-robo0data-1124-r/
+  exptid: 25-place-can-R/25-trainrobo1-100episodes-progress25-0110-r/
+  left_right_mask: [0, 1]
+  offset: [ 0., 0., 0., -0., 0, 0.1, -0.1, 0.15, 0, 0  ] 
+- id: 26
+  # exptid: 26-pick-human-can-R/26-progress-1003-r/
+  exptid: 26-pick-human-can-R/26-progress25-robo0data-1212-r/
+  left_right_mask: [0, 1]
+- id: 29
+  exptid: 29-pick-table-can-R/29-progress-0930-r/
+  left_right_mask: [0, 1]
+- id: 30
+  # exptid: 30-pick-human-plate-L/30-progress-1002-l/
+  # exptid: 30-pick-human-plate-L/30-progress25-robo0data-1212-l/
+  exptid: 30-pick-human-plate-L/30-trainrobo1-100episodes-progress25-0110-l/
+  left_right_mask: [1, 0]
+  ckpt: 35000
+  init_shift: 10
+  progress_thresh: 0.9
+  timeout: 15
+  reference_replay_id: 0
+- id: 31
+  # exptid: 31-place-plate-L/31-progress-1003-l/
+  # exptid: 31-place-plate-L/31-progress-1013-l/
+  # exptid: 31-place-plate-L/31-progress25-robo0data-1212-l/
+  # exptid: 31-place-plate-L/31-progress25-data1229-doublehand-chop25-l/
+  exptid: 31-place-plate-L/31-progress25-data1229-chop25-l/
+  ckpt: 45000
+  # init_shift:  30
+  # init_act: true
+  left_right_mask: [1, 0]
+- id: 32
+  exptid: 32-pick-table-plate-LR/32-progress-1014-lr/
+  left_right_mask: [1, 1]
+  delay: [0, 0]
+  ckpt: 45000
+  offset: [ 0., 0., 0., -0., 0, 0.1, -0.1, 0, 0, 0  ]  
+- id: 33
+  # exptid: 33-handover-plate-L/33-progress-1002-l/
+  # exptid: 33-handover-plate-L/33-progress-30ahead-l/
+  # exptid: 33-handover-plate-L/33-progress25-finetunehand-1125-l/
+  # exptid: 33-handover-plate-L/33-progress25-finetunehand-fixed-1128-l/
+  exptid: 33-handover-plate-L/33-progress25-finetunehand-fixed2-1129-l/
+  left_right_mask: [1, 0]
+  delay: [0, 0]
+  ckpt: 45000
+  # ckpt: 35000
+- id: 45
+  exptid: 45-pick-and-handover-book-office/45-trainrobo1-mergedskill-progress25-1223-l/
+  # exptid: 45-pick-and-handover-book-office/45-progress25-mergedskill-data1228-1231-l/
+  # exptid: 45-pick-and-handover-book-office/45-progress25-mergedskill-refineddata-0104-l/
+  # exptid: 45-pick-and-handover-book-office/45-progress25-mergedskill-refineddata2-0104-l/
+  # exptid: 45-pick-and-handover-book-office/45-trainrobo1-onlypick1-progress25-0110-l/
+  ckpt: 45000
+  init_act: true
+  init_shift: 1
+  left_right_mask: [1, 0]
+  reference_replay_id: 39 # book 1
+  # reference_replay_id: 0 # book 2
+  offset: [ -0.0, 0.0, 0.0, 0.2, 0, 0, 0, 0, 0, 0  ]  
+  # offset: [ -0.1, 0.5, 0.2, 0.1, 0, 0, 0, 0, 0, 0  ]  
+- id: 46
+  # exptid: 46-pick-table-plate-disturb/46-progress25-data1207-1208-lr
+  exptid: 46-pick-table-plate-disturb/46-progress25-cancelunsafe-data1207-1209-lr
+  ckpt: 45000
+  left_right_mask: [1, 1]
+  action_dim: 26
+  offset: [ 0., 0., 0., -0., 0, 0., -0., 0.15, 0, 0  ] 
+- id: 47
+  # exptid: 47-handover-plate-disturb/47-progress25-data1207-1208-l
+  exptid: 47-handover-plate-disturb/47-progress25-cancelunsafe-data1207-1209-l
+  action_dim: 26
+  left_right_mask: [1, 0]
+
+- id: 48
+  # exptid: 48-pick-can-disturb/48-progress25-1118-fixed-r/
+  # exptid: 48-pick-can-disturb/48-progress25-1120-r/
+  exptid: 48-pick-can-disturb/48-progress25-data1122-1123-r/
+  ckpt: 30000
+  left_right_mask: [0, 1]
+  reference_replay_id: 10
+  init_act: true
+  offset: [ 0., 0., 0., -0., 0, 0.1, -0.1, 0.15, 0, 0  ]  
+- id: 49
+  # exptid: 49-place-can-disturb/49-progress25-1118-fixed-r/
+  # exptid: 49-place-can-disturb/49-progress25-1120-r/
+  exptid: 49-place-can-disturb/49-progress25-data1122-1123-r/
+
+- id: 50
+  exptid: 50-pick-tissue-dining/50-pre30f-progress25-newcode-1223-l
+  left_right_mask: [1, 0]
+  ckpt: 45000 
+  reference_replay_id: 2
+  init_shift: 0
+  offset: [ 0.25, 0.2, 0, -0.0, 0.05, 0., 0, 0, -0., 0  ]
+- id: 51
+  # exptid: 51-pick-sponge-dining/51-progress25-1104-r/
+  exptid: 51-pick-sponge-dining/51-data1211-trainrobo1-progress25-1213-r/
+  # exptid: 51-pick-sponge-dining/51-data1211-trainrobo1-progress50-1214-lr/
+  # init_shift: 0
+  left_right_mask: [0, 1]
+  # progress_thresh: 1.5
+# - id: 511
+#   exptid: 51-pick-sponge-dining/51-data1211-trainrobo1-doublehand-progress25-1213-lr/
+#   # exptid: 51-pick-sponge-dining/51-data1211-trainrobo1-doublehand-progress50-1214-lr/
+#   left_right_mask: [1, 1]
+#   ckpt: 45000 
+- id: 52
+  init_shift: 10
+  # exptid: 52-brush-plate-dining/52-pre30f-1101-lr/
+  # exptid: 52-brush-plate-dining/52-progress25-chop25-1128-lr/
+  # exptid: 52-brush-plate-dining/52-data1211-prelong0-progress25-1213-lr/
+  exptid: 52-brush-plate-dining/52-data1211-prelong0-progress25-chop35-1214-lr/
+  left_right_mask: [1, 1]
+  reference_replay_id: 1
+  progress_thresh: 2
+  init_act: true
+  timeout: 10
+  ckpt: 45000 
+- id: 53
+  # exptid: 53-place-sponge-dining/53-pre30f-1101-r/
+  init_shift: 0
+  exptid: 53-place-sponge-dining/53-data1211-progress25-1213-r/
+  left_right_mask: [0, 1]
+  ckpt: 45000 
+- id: 54
+  exptid: 54-pick-book-office/54-progress25-1109-l/
+  left_right_mask: [1, 0]
+- id: 55
+  exptid: 55-handover-book-office/55-progress25-1109-l/
+  left_right_mask: [1, 0]
+- id: 56
+  # exptid: 56-pick-stamp-office/56-pre30f-1110-r/
+  exptid: 56-pick-stamp-office/56-progress25-data0102-0103-r/
+  exptid: 56-pick-stamp-office/56-progress10-data0102-0119-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 0.95
+  offset: [ 0, 0, 0, 0, 0, 0.1, 0, 0, -0.1, 0  ]
+- id: 57
+  # exptid: 57-press-stamp-office/57-progressminus1-1114-r/
+  # exptid: 57-press-stamp-office/57-prelong30-progress10-1121-r/
+  # exptid: 57-press-stamp-office/57-prelen0-progress10-data0102-0103-r/
+  # exptid: 57-press-stamp-office/57-prelen0-progress25-data0102-0104-r/
+  exptid: 57-press-stamp-office/57-prelen0-progress10-data0102-chop10-0120-r/
+  # exptid: 57-press-stamp-office/57-prelen0-progress10-data0102-chop5-0120-r/
+  # ckpt: 25000
+  progress_thresh: 0.85
+  ckpt: 45000
+  init_shift: 5
+  init_act: true
+  timeout: 5
+  offset: [ 0, 0, 0, 0, 0, 0.1, 0, 0, -0.1, 0  ]
+  # ckpt: 40000
+  # exptid: 57-press-stamp-office/57-progressminus1-history5-1115-r/
+  # history_stack: 5
+  progress_frame_replay: 10
+  reference_replay_id: 20
+  left_right_mask: [0, 1]
+  timeout: 10
+- id: 58
+  # exptid: 58-place-stamp-office/58-progressminus1-1110-r/
+  # exptid: 58-place-stamp-office/58-progress25-fixed-1212-r/
+  exptid: 58-place-stamp-office/58-progress25-data0102-0103-r/
+  left_right_mask: [0, 1]
+  init_act: true
+  init_shift: 30
+  offset: [ 0, 0, 0, 0, 0, 0.1, 0, 0, -0.1, 0  ]
+- id: 59
+  # exptid: 59-receive-and-place-cap-office/59-progress25-1113-r/
+  # exptid: 59-receive-and-place-cap-office/59-progress25-history5-1115-r/
+  # history_stack: 5
+  # exptid: 59-receive-and-place-cap-office/59-prelong0-progress25-1119-r/
+  # exptid: 59-receive-and-place-cap-office/59-prelong0-progress25-fixed-1121-r/
+  exptid: 59-receive-and-place-cap-office/59-progress25-chop25-1122-r/
+  ckpt: 45000
+  left_right_mask: [0, 1]
+  init_shift: 20
+  offset: [ 0, 0, 0, 0, 0, 0.2, 0, 0.05, -0.0, 0  ]
+  
+- id: 60
+  # exptid: 60-pick-and-handover-cap-office/60-progress25-1113-r/
+  # exptid: 60-pick-and-handover-cap-office/60-prelong0-progress25-1119-r/
+  exptid: 60-pick-and-handover-cap-office/60-prelong0-progress25-fixed-1121-r/
+  ckpt: 35000
+  # exptid: 60-pick-and-handover-cap-office/60-progress25-history5-1115-r
+  # history_stack: 5
+  left_right_mask: [0, 1]
+  init_act: true
+  init_shift: 15
+  offset: [ 0, 0, 0, 0, 0, 0.2, 0, 0.05, -0.0, 0  ]
+- id: 61
+  # exptid: 61-press-lamp-office/61-progressminus1-1114-r/
+  # exptid: 61-press-lamp-office/61-prelong0-progress25-1119-l/
+  exptid: 61-press-lamp-office/61-progress10-1121-l/
+  progress_frame_replay: 10
+  ckpt: 45000
+  # exptid: 61-press-lamp-office/61-progressminus1-history5-1115-l/
+  # history_stack: 5
+  left_right_mask: [1, 0]
+  offset: [ 0, 0, 0, 0.05, 0., 0., 0, 0.0, -0.0, 0  ]
+- id: 62
+  exptid: 62-all-stamp-office/62-noprogress-newdata-0102-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 5.0
+  timeout: 20
+
+- id: 63
+  # exptid: 63-pick-can-disturb-ablation/63-ablation-percent1-0106-r/
+  # exptid: 63-pick-can-disturb-ablation/63-ablation-percent10-0112-r/
+  exptid: 63-pick-can-disturb-ablation/63-ablation-percent20-0113-r/
+  left_right_mask: [0, 1]
+  ckpt: 45000
+- id: 64
+  # exptid: 64-press-stamp-disturb-ablation/64-progress10-ablation-percent1-0106-r/
+  # exptid: 64-press-stamp-disturb-ablation/64-progress10-ablation-percent10-0112-r/
+  exptid: 64-press-stamp-disturb-ablation/64-progress10-ablation-percent20-0113-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 0.95
+  ckpt: 25000
+  init_shift: 10
+  init_act: true
+  timeout: 5
+- id: 65
+  # exptid: 65-place-plate-disturb-ablation/65-chop25-ablation-percent1-0106-l/
+  exptid: 65-place-plate-disturb-ablation/65-chop25-ablation-percent10-0112-l/
+  # exptid: 65-place-plate-disturb-ablation/65-chop25-ablation-percent20-0112-l/
+  left_right_mask: [1, 0]
+  ckpt: 45000
+
+- id: 66
+  # exptid: 66-1task-e2e/66-1task-cheers-0110-r/
+  exptid: 66-1task-e2e/66-1task-13dim-cheers-0113-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 5.0
+  ckpt: 45000
+  timeout: 3600
+- id: 67
+  # exptid: 67-3task-e2e/67-3task-cheers-can-0110-r/
+  exptid: 67-3task-e2e/67-3task-13dim-cheers-can-0113-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 5.0
+  ckpt: 35000
+  timeout: 3600
+- id: 68
+  # exptid: 68-5task-e2e/68-5task-cheers-can-shake-wave-0110-r/
+  exptid: 68-5task-e2e/68-5task-13dim-cheers-can-shake-wave-progress0113-r/
+  left_right_mask: [0, 1]
+  progress_thresh: 5.0
+  ckpt: 45000
+  timeout: 3600
+  
+- id: 70
+  exptid: 70-right-hand-pick-setA/70-progress25-1204-r/
+  left_right_mask: [0, 1]
+  skill_set_size: 4
+- id: 71
+  # exptid: 71-right-hand-pick-setB/71-progress25-1205-r
+  exptid: 71-right-hand-pick-setB/71-actionhead2-1206-r/
+  # exptid: 71-right-hand-pick-setB/71-srchead2-1206-r
+  left_right_mask: [0, 1]
+  skill_set_size: 2
+
+

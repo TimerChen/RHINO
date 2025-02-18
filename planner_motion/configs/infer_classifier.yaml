@@ -1,0 +1,22 @@
+GENERAL:
+  EXP_NAME: Classifier_test
+  CHECKPOINT: ./checkpoints
+  LOG_DIR: ./log
+
+TRAIN:
+  LR: 1e-4
+  WEIGHT_DECAY: 0.00002
+  BATCH_SIZE: 1024
+  EPOCH: 300
+  # STEP: 1000000
+  LOG_STEPS: 10
+  # SAVE_STEPS: 50
+  SAVE_EPOCH: 20
+  SAVE_TOP_K: -1
+  RESUME: #checkpoints/IG-S/8/model/epoch=99-step=17600.ckpt
+  NUM_WORKERS: 10
+  MODE: finetune
+  LAST_EPOCH: 0
+  LAST_ITER: 0
+  HISTORY_LENGTH: 30
+  PREDICT_LENGTH: 0

@@ -1,0 +1,38 @@
+# CHECKPOINT: checkpoints/classifier/modelreact_1128_his30_rh0_new_pos/epoch=79-step=21280.ckpt
+# CHECKPOINT: checkpoints/classifier/modelreact_1128_his30_rh0_new_pos/epoch=79-step=21280-v1.ckpt
+# CHECKPOINT: checkpoints/classifier/modelreact_1128_his30_rh0_new_pos_2/epoch=39-step=10640.ckpt
+# CHECKPOINT: checkpoints/classifier/modelreact_1203_his30_rh0_pos_near_better_msk0_2_mean_re/epoch=119-step=31920-v1.ckpt
+# CHECKPOINT: checkpoints/classifier/modelreact_1203_his30_rh0_pos_2/epoch=39-step=10640.ckpt
+# CHECKPOINT: checkpoints/classifier/model1204_his30_rh0_pos_near_better_msk0_2_mean/epoch=219-step=58520.ckpt
+# CHECKPOINT: checkpoints/classifier/model1213_scene2_his30_rh0_pos_near_better_mean_msk0_2/epoch=239-step=85680.ckpt
+# CHECKPOINT: checkpoints/classifier/model1213_scene2_his30_rh0_pos_near_better_mean_msk0_2/epoch=19-step=7140.ckpt
+
+# CHECKPOINT: checkpoints/classifier/model1216_office_his30_rh0_pos_near_better_mean_msk0_2/epoch=299-step=86700.ckpt
+# CHECKPOINT: checkpoints/classifier/model1221_office_his30_rh0_pos_head_near_better_mean_msk0_2/epoch=79-step=19760.ckpt
+# CHECKPOINT: checkpoints/classifier/model1221_office_his30_rh0_pos_head/epoch=179-step=44460.ckpt
+# CHECKPOINT: checkpoints/classifier/model1223_office_his30_rh0_posz_head_no_xshift/epoch=299-step=74100.ckpt
+
+CHECKPOINT1: checkpoints/classifier/model1223_office_his30_rh0_posz_head_no_xshift/epoch=299-step=74100.ckpt
+
+CHECKPOINT2: checkpoints/classifier/model1213_scene2_his30_rh0_pos_near_better_mean_msk0_2/epoch=239-step=85680.ckpt
+CHECKPOINT2: checkpoints/classifier/model1228_scene2_his30_rh0_pos_near_better_mean_msk0_2_noise/epoch=99-step=37000.ckpt
+
+# CHECKPOINT2: checkpoints/classifier/model1228_scene2_his30_rh0_pos_near_better_mean_msk0_2_noise/epoch=299-step=111000.ckpt
+# CHECKPOINT2: checkpoints/classifier/model1229_scene2_his30_rh0_pos_near_better_mean_msk0_2_noise_skip_occu/epoch=299-step=91500.ckpt\
+# CHECKPOINT2: checkpoints/classifier/model1229_scene2_his30_rh0_pos_near_better_mean_msk0_2_noise_skip_occu/epoch=19-step=6100.ckpt
+
+# CHECKPOINT2: checkpoints/classifier/model0121_scene2_his30_rh0/epoch=199-step=61000.ckpt
+# CHECKPOINT2: checkpoints/classifier/model0121_zero_hand_scene2_his30_rh0/epoch=129-step=39650.ckpt
+# CHECKPOINT2: checkpoints/classifier/model0122_zero_hand1_scene2_his30_rh0/epoch=44-step=13725.ckpt
+# CHECKPOINT2: checkpoints/classifier/model0122_zero_hand1_scene2_his30_rh0/epoch=19-step=6100.ckpt
+
+CHECKPOINT3: checkpoints/classifier/model1225_scene3_his30_rh0_posz_head_no_xshift/epoch=299-step=92100.ckpt
+CHECKPOINT3: checkpoints/classifier/model1227_scene3_his30_rh0_pos_head_no_xshift_near_better_mean_msk0_2/epoch=159-step=49120.ckpt
+CHECKPOINT3: checkpoints/classifier/model1227_scene3_his30_rh0_posz_head_no_xshift_near_better_mean_msk0_2/epoch=159-step=49120.ckpt
+
+
+CHECKPOINT3: checkpoints/classifier/model1227_scene3_his30_rh0_posz_head_no_xshift_near_better_mean_msk0_2/epoch=159-step=49120.ckpt
+# CHECKPOINT3: checkpoints/classifier/model1227_scene3_his30_rh0_posz_head_no_xshift_near_better_mean_msk0_2/epoch=39-step=12280.ckpt
+# CHECKPOINT3: checkpoints/classifier/model0120_0_scene3_his30_rh0_posz_head_no_xshift_near_better_mean_msk0_2/epoch=24-step=7675.ckpt
+# CHECKPOINT3: checkpoints/classifier/model1227_scene3_his30_rh0_pos_head_no_xshift_near_better_mean_msk0_2/epoch=299-step=92100.ckpt
+# CHECKPOINT3: checkpoints/ReAct-30-10-d256x4-t300/model_6d_seq_0_react_1228_scene2_newhandshake_2/epoch=3749-step=555000.ckpt
