@@ -25,7 +25,7 @@ Humanoid-Human-Object Interaction <br> from Human Demonstrations</h1>
 </p>
 
 <p align="center">
-<h3 align="center"><a href="https://humanoid-interaction.github.io/">Website</a> | arXiv | <a href="https://youtu.be/Ps7dIM_cYqI">Video</a> | <a href="https://x.com/ericliuof97/status/1891921410442002753">Summary</a> </h3>
+<h3 align="center"><a href="https://humanoid-interaction.github.io/">Website</a> | <a href="https://arxiv.org/abs/2502.13134">arXiv</a> | <a href="https://youtu.be/Ps7dIM_cYqI">Video</a> | <a href="https://x.com/ericliuof97/status/1891921410442002753">Summary</a> </h3>
 
   <div align="center"></div>
 </p>
@@ -33,6 +33,9 @@ Humanoid-Human-Object Interaction <br> from Human Demonstrations</h1>
 <img src="./docs/img/teaser.png" width="80%"/>
 </p>
 
+## 🎉 News
+- [2025/03] We have released rgb video of human interaction data! Please check [here](docs/extra_human_video.md).
+- [2025/02] Original release!
 
 ## ⚙️ Installation
 ### Overview of Running Environments
@@ -89,6 +92,7 @@ Note that HaMeR need to be cloned directly under the `RHINO` directory.
 pip install ultralytics
 pip install scipy==1.10.1
 pip install webdataset
+pip install h5py
 ```
 
 5. If you are encountering numpy issues such as `TypeError: expected np.ndarray (got numpy.ndarray)`, try reinstalling numpy with pip:
@@ -186,7 +190,8 @@ Download the dataset as a sub-directory `rhino_data` of this repository:
 
 ```bash
 cd rhino_data/
-tar -xzvf motion_data.tar.gz
+tar -xzvf data/motion_data/motion_data.tar.gz
+
 ```
 
 2. Create symlink for assets and checkpoints
@@ -341,6 +346,7 @@ This code builds upon following open-source code-bases. Please visit the URLs to
 @article{rhino2025chen,
   author    = {Chen*, Jingxiao and Li*, Xinyao and Cao*, Jiahang and Zhu, Zhengbang and Dong, Wentao and Liu, Minghuan and Wen, Ying and Yu, Yong and Zhang, Liqing and Zhang, Weinan},
   title     = {RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations},
+  journal   = {arXiv preprint arXiv:2502.13134},
   year      = {2025},
 }
 ```
