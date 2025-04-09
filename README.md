@@ -191,12 +191,12 @@ Download the dataset as a sub-directory `rhino_data` of this repository:
 ```bash
 cd rhino_data/
 tar -xzvf data/motion_data/motion_data.tar.gz
-
 ```
 
 2. Create symlink for assets and checkpoints
 
 ```bash
+ln -s rhino_data/motions_processed planner_motion/motions_processed
 ln -s rhino_data/h1_assets deploy_control/h1_assets
 ln -s rhino_data/yolo_ckpts deploy_control/zed_module/yolo_ckpts
 ```
