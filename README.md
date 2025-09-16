@@ -308,6 +308,7 @@ python ros_nodes/zed_react_node.py --use_camera --vis
 ```bash
 cd deploy_control
 python ros_nodes/react_node.py
+```
 
 **In terminal 5**: run the manipulation module.
 
